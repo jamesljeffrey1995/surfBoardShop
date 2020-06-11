@@ -1,4 +1,4 @@
-from wtforms import StringField, SubmitField, PasswordField, BooleanField
+from wtforms import StringField, SubmitField, PasswordField, BooleanField, SelectField, DecimalField
 from wtforms.validators import DataRequired, Length, Email, EqualTo, ValidationError
 from application.models import Users
 from flask_wtf import FlaskForm
@@ -84,16 +84,14 @@ class UpdateAccountForm(FlaskForm):
                 raise ValidationError('Email already in use')
 
 class PostForm(FlaskForm):
-    title = StringField('Title',
+    name = StringField('Name',
         validators = [
             DataRequired(),
             Length(min=2, max=100)
         ]
     )
-    content = StringField('Content',
-        validators = [
-            DataRequired(),
-            Length(min=2, max=1000)
-        ]
-    )
+    style = SelectField('Style',choices=[('Longboard','Longboard'),('Shortboard','Shortboard'),('Fish','Fish'),('Minimall','Minimall')])
+    volume = DecimalField('Volume', places=2)
+    size = DecimalField('Size', places=1)
+    price = DecimalField('Price', places=2)
     submit = SubmitField('Post!')

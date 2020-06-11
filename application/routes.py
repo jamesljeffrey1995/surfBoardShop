@@ -1,5 +1,5 @@
 from application import app, db, bcrypt
-from application.models import Posts, Users
+from application.models import Product, Users, Order, Order_line
 from flask_login import login_user, current_user, logout_user, login_required, current_user
 from application.forms import PostForm, RegistrationForm, LoginForm, UpdateAccountForm
 from flask import render_template, redirect, url_for, request
@@ -27,15 +27,17 @@ def register():
 
 
 
-@app.route('/post', methods=['GET', 'POST'])
+@app.route('/submit_board', methods=['GET', 'POST'])
 @login_required
-def post():
+def submit_board():
     form = PostForm()
     if form.validate_on_submit():
-        postData = Posts(
-            title=form.title.data,
-            content=form.content.data,
-            author=current_user
+        postData = Product(
+            name=form.name.data,
+            size=form.size.data,
+            style=form.style.data,
+            volume=form.volume.data,
+            price=form.price.data
             )
 
         db.session.add(postData)
@@ -66,7 +68,7 @@ def account_delete():
 @app.route('/')
 @app.route('/home')
 def home():
-    postData = Posts.query.all()
+    postData = Product.query.all()
     return render_template('home.html', title='Home', posts=postData)
 
 

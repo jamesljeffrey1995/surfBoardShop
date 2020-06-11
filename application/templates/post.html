@@ -6,13 +6,13 @@
     <!-- the form -->
     <form method='POST' action=''>
 	{{ form.hidden_tag() }}
-	{{ form.title.label }}
-        {{ form.title }}
-		{% if form.title.errors %}
+	{{ form.name.label }}
+        {{ form.name }}
+		{% if form.name.errors %}
             <!-- surround the displayed errors in a error div tag, this can then be styled later to be red etc. -->
             <div class="error">
                 <!-- for each error in the errors for the first_name input field -->
-                {% for error in form.title.errors %}
+                {% for error in form.name.errors %}
                     <!-- display the error -->
                     <span>{{ error }}</span>
                 <!-- end the for-loop -->
@@ -20,19 +20,18 @@
             </div>
 	{% endif %}
 	<br>
-	{{ form.content.label }}
-	{{ form.content }}
-	{% if form.content.errors %}
-            <!-- surround the displayed errors in a error div tag, this can then be styled later to be red etc. -->
-            <div class="error">
-                <!-- for each error in the errors for the first_name input field -->
-                {% for error in form.content.errors %}
-                    <!-- display the error -->
-                    <span>{{ error }}</span>
-                <!-- end the for-loop -->
-                {% endfor %}
-            </div>
-	{% endif %}
+
+	{{ form.volume.label }}
+        {{ form.volume }}
+        <br>
+	{{ form.size.label }}
+        {{ form.size }}
+        <br>
+	{{ form.price.label }}
+	{{ form.price }}
+        <br>
+	{{ form.style.label }}
+	{{ form.style }}
 	<br>
 	{{ form.submit }}
     </form>
