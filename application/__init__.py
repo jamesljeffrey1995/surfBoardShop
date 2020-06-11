@@ -9,7 +9,7 @@ app = Flask(__name__)
 login_manager = LoginManager(app)
 login_manager.login_view = 'login'
 bcrypt = Bcrypt(app)
-app.config['SQLALCHEMY_DATABASE_URI']=getenv('FLASK_BLOG_URI')
+app.config['SQLALCHEMY_DATABASE_URI']=getenv('SURF_URI')
 db = SQLAlchemy(app)
 app.config['SECRET_KEY'] = getenv('MY_SECRET_KEY')
 
