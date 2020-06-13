@@ -1,4 +1,4 @@
-from wtforms import StringField, SubmitField, PasswordField, BooleanField, SelectField, DecimalField
+from wtforms import StringField, SubmitField, PasswordField, BooleanField, SelectField, DecimalField, IntegerField
 from wtforms.validators import DataRequired, Length, Email, EqualTo, ValidationError
 from application.models import Users
 from flask_wtf import FlaskForm
@@ -95,3 +95,7 @@ class PostForm(FlaskForm):
     size = DecimalField('Size', places=1)
     price = DecimalField('Price', places=2)
     submit = SubmitField('Post!')
+
+class Quantity(FlaskForm):
+    first_name = IntegerField('Quantity')
+    submit = SubmitField('Update')

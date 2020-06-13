@@ -1,5 +1,44 @@
 {% extends "layout.html" %}
 {% block body_content %}
-    <h1>Home Page</h1>
+	<h1>Home Page</h1>
 	<p>Welcome to this web app!</p>
+	<head>
+	<style>
+		table {
+  			font-family: arial, sans-serif;
+  			border-collapse: collapse;
+  			width: 100%;
+		}
+
+		td, th {
+  			border: 1px solid #dddddd;
+  			text-align: left;
+  			padding: 8px;
+		}
+
+		tr:nth-child(even) {
+  			background-color: #dddddd;
+		}
+	</style>
+	</head>
+	<table>
+		<tr>
+			<th>Name of board</th>
+    			<th>Size</th>
+    			<th>Style</th>
+			<th>Volume</th>
+			<th>Price</th>
+			<th></th>
+		</tr>
+		{% for item in product %}
+  		<tr>
+			<td><a href="{{ url_for('product', productItem=item.id)}}">{{ item.name }}</a></td>
+    			<td>{{ item.size }}</td>
+    			<td>{{ item.style }}</td>
+			<td>{{ item.volume }}</td>
+			<td>{{ item.name }}</td>
+			<td>{{ item.id }}</td>
+  		</tr>
+		{% endfor %}
+	</table>
 {% endblock %}
