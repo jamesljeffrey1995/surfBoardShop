@@ -1,8 +1,9 @@
 from application import app, db, bcrypt
-from application.models import Product, Users, Order, Order_line
+from application.models import Product, Users, Orders, Order_line
 from flask_login import login_user, current_user, logout_user, login_required, current_user
 from application.forms import PostForm, RegistrationForm, LoginForm, UpdateAccountForm
 from flask import render_template, redirect, url_for, request
+import pymysql
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
@@ -69,7 +70,16 @@ def account_delete():
 @app.route('/home')
 def home():
     postData = Product.query.all()
-    return render_template('home.html', title='Home', posts=postData)
+    return render_template('home.html', title='Home', product=postData)
+
+
+@app.route('/Product/<productItem>')
+def product(productItem):
+    if int(productItem) > Product.query.count():
+        return redirect(url_for('home'))
+    data =Product.query.filter_by(id=productItem).first()
+    return render_template('product.html', title='Post', data=data)
+
 
 
 
