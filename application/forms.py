@@ -96,6 +96,6 @@ class PostForm(FlaskForm):
     price = DecimalField('Price', places=2)
     submit = SubmitField('Post!')
 
-class Quantity(FlaskForm):
-    first_name = IntegerField('Quantity')
+class OrdersForm(FlaskForm):
+    quantity = IntegerField('Quantity')
     submit = SubmitField('Update')
