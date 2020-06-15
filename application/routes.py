@@ -1,9 +1,10 @@
 from application import app, db, bcrypt
 from application.models import Product, Users, Orders, Order_line
 from flask_login import login_user, current_user, logout_user, login_required, current_user
-from application.forms import PostForm, RegistrationForm, LoginForm, UpdateAccountForm
+from application.forms import PostForm, RegistrationForm, LoginForm, UpdateAccountForm, OrdersForm
 from flask import render_template, redirect, url_for, request
 import pymysql
+import sqlalchemy
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
@@ -23,7 +24,7 @@ def register():
         db.session.add(user)
         db.session.commit()
 
-        return redirect(url_for('post'))
+        return redirect(url_for('home'))
     return render_template('register.html', title='Register', form=form)
 
 
@@ -73,12 +74,36 @@ def home():
     return render_template('home.html', title='Home', product=postData)
 
 
-@app.route('/Product/<productItem>')
+@app.route('/Product/<productItem>', methods=["GET", "POST"])
 def product(productItem):
+    form = OrdersForm()
+    theProduct = Product.query.filter_by(id=productItem).first()
+    itemPrice = theProduct.price
     if int(productItem) > Product.query.count():
         return redirect(url_for('home'))
+    if not current_user.is_authenticated:
+        return redirect(url_for('home'))
     data =Product.query.filter_by(id=productItem).first()
-    return render_template('product.html', title='Post', data=data)
+    if form.validate_on_submit():
+        orderData = Orders(
+                customer = current_user
+                )
+
+        db.session.add(orderData)
+        db.session.commit()
+
+        order_lineData = Order_line(
+                order_id = Orders.query.count(),
+                product_id = productItem,
+                quantity = form.quantity.data,
+                total = (form.quantity.data * itemPrice)
+                )
+        db.session.add(order_lineData)
+        db.session.commit()
+
+        return redirect(url_for('home'))
+
+    return render_template('product.html', title='Product', data=data, form=form)
 
 
 

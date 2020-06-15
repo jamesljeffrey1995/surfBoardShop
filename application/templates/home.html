@@ -32,12 +32,17 @@
 		</tr>
 		{% for item in product %}
   		<tr>
-			<td><a href="{{ url_for('product', productItem=item.id)}}">{{ item.name }}</a></td>
+			<td>
+				{% if current_user.is_authenticated %}
+				<a href="{{ url_for('product', productItem=item.id)}}">{{ item.name }}</a>
+				{% else %}
+				{{ item.name }}
+				{% endif %}
+			</td>
     			<td>{{ item.size }}</td>
     			<td>{{ item.style }}</td>
 			<td>{{ item.volume }}</td>
-			<td>{{ item.name }}</td>
-			<td>{{ item.id }}</td>
+			<td>{{ item.price }}</td>
   		</tr>
 		{% endfor %}
 	</table>
