@@ -33,8 +33,7 @@ class Orders(db.Model):
     customer_order = db.relationship('Product', secondary = 'order_line')
 
 class Order_line(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    order_id = db.Column(db.Integer, db.ForeignKey('orders.id'))
+    order_id = db.Column(db.Integer, db.ForeignKey('orders.id'), primary_key=True)
     product_id= db.Column(db.Integer, db.ForeignKey('product.id'), nullable=False)
     quantity = db.Column(db.Integer, nullable=False)
     total = db.Column(db.Float, nullable=False)
@@ -46,4 +45,5 @@ class Product(db.Model):
     volume = db.Column(db.Float, nullable=False)
     size = db.Column(db.Float, nullable=False)
     price = db.Column(db.Float, nullable=False)
+    stock = db.Column(db.Integer, nullable=False)
     product_line= db.relationship(Orders, secondary='order_line')

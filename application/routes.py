@@ -39,7 +39,8 @@ def submit_board():
             size=form.size.data,
             style=form.style.data,
             volume=form.volume.data,
-            price=form.price.data
+            price=form.price.data,
+            stock=form.stock.data
             )
 
         db.session.add(postData)
@@ -81,10 +82,9 @@ def product(productItem):
     itemPrice = theProduct.price
     if int(productItem) > Product.query.count():
         return redirect(url_for('home'))
-    if not current_user.is_authenticated:
+    elif not current_user.is_authenticated:
         return redirect(url_for('home'))
-    data =Product.query.filter_by(id=productItem).first()
-    if form.validate_on_submit():
+    elif form.validate_on_submit():
         orderData = Orders(
                 customer = current_user
                 )
@@ -98,12 +98,19 @@ def product(productItem):
                 quantity = form.quantity.data,
                 total = (form.quantity.data * itemPrice)
                 )
+        if order_lineData.quantity > theProduct.stock:
+            theOrder = Orders.query.filter_by(id=Orders.query.count()).first()
+            db.session.delete(theOrder)
+            db.session.commit()
+            return redirect(url_for('home'))
+
         db.session.add(order_lineData)
+        theProduct.stock -= order_lineData.quantity
         db.session.commit()
 
         return redirect(url_for('home'))
 
-    return render_template('product.html', title='Product', data=data, form=form)
+    return render_template('product.html', title='Product', data=theProduct, form=form)
 
 
 
