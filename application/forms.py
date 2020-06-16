@@ -94,6 +94,7 @@ class PostForm(FlaskForm):
     volume = DecimalField('Volume', places=2)
     size = DecimalField('Size', places=1)
     price = DecimalField('Price', places=2)
+    stock = IntegerField('Stock')
     submit = SubmitField('Post!')
 
 class OrdersForm(FlaskForm):
