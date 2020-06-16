@@ -91,15 +91,14 @@ def product(productItem):
 
         db.session.add(orderData)
         db.session.commit()
-
+        theOrder = Orders.query.order_by(Orders.id.desc()).first()
         order_lineData = Order_line(
-                order_id = Orders.query.count(),
+                order_id = theOrder.id,
                 product_id = productItem,
                 quantity = form.quantity.data,
                 total = (form.quantity.data * itemPrice)
                 )
         if order_lineData.quantity > theProduct.stock:
-            theOrder = Orders.query.filter_by(id=Orders.query.count()).first()
             db.session.delete(theOrder)
             db.session.commit()
             return redirect(url_for('home'))
