@@ -75,7 +75,7 @@ def home():
     return render_template('home.html', title='Home', product=postData)
 
 
-@app.route('/Product/<productItem>', methods=["GET", "POST"])
+app.route('/Product/<productItem>', methods=["GET", "POST"])
 def product(productItem):
     form = OrdersForm()
     theProduct = Product.query.filter_by(id=productItem).first()
