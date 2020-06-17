@@ -1,6 +1,6 @@
-shop-venv/
+surf-venv/
 /__pycache__/
 .vscode/
 *.pyc
-chromedriver/
+chromedriver
 install-jenkins.sh
