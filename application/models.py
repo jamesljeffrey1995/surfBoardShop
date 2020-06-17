@@ -33,11 +33,11 @@ class Orders(db.Model):
     customer_order = db.relationship('Product', secondary = 'order_line')
 
 class Order_line(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    order_id = db.Column(db.Integer, db.ForeignKey('orders.id'), nullable=False)
+    order_id = db.Column(db.Integer, db.ForeignKey('orders.id'), primary_key=True, nullable=False)
     product_id= db.Column(db.Integer, db.ForeignKey('product.id'), nullable=False)
     quantity = db.Column(db.Integer, nullable=False)
     total = db.Column(db.Float, nullable=False)
+
 
 class Product(db.Model):
     id = db.Column(db.Integer, primary_key=True)
