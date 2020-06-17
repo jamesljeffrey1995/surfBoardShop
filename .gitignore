@@ -2,3 +2,5 @@ shop-venv/
 /__pycache__/
 .vscode/
 *.pyc
+chromedriver/
+install-jenkins.sh
