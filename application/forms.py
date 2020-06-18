@@ -99,4 +99,4 @@ class PostForm(FlaskForm):
 
 class OrdersForm(FlaskForm):
     quantity = IntegerField('Quantity')
-    submit = SubmitField('Update')
+    submit = SubmitField('Checkout')

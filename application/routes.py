@@ -40,7 +40,8 @@ def submit_board():
             style=form.style.data,
             volume=form.volume.data,
             price=form.price.data,
-            stock=form.stock.data
+            stock=form.stock.data,
+            usersShop=current_user
             )
 
         db.session.add(postData)
@@ -67,6 +68,13 @@ def account_delete():
     db.session.commit()
     return redirect(url_for('register'))
 
+@app.route("/user_shop/delete/<productDelete>", methods=["GET", "POST"])
+@login_required
+def product_delete(productDelete):
+    products = Product.query.filter_by(id=productDelete).first()
+    db.session.delete(products)
+    db.session.commit()
+    return redirect(url_for('home'))
 
 @app.route('/')
 @app.route('/home')
@@ -74,13 +82,18 @@ def home():
     postData = Product.query.all()
     return render_template('home.html', title='Home', product=postData)
 
+@app.route('/user_shop', methods=["GET", "POST"])
+def user_shop():
+    postData = Product.query.all()
+    return render_template('userShop.html', title='User Shop', product=postData)
 
 @app.route('/Product/<productItem>', methods=["GET", "POST"])
 def product(productItem):
     form = OrdersForm()
     theProduct = Product.query.filter_by(id=productItem).first()
     itemPrice = theProduct.price
-    if int(productItem) > Product.query.count():
+    amountProduct= Product.query.order_by(Product.id.desc()).first()
+    if int(productItem) > amountProduct.id:
         return redirect(url_for('home'))
     elif not current_user.is_authenticated:
         return redirect(url_for('home'))

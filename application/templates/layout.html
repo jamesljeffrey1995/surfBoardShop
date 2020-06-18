@@ -6,6 +6,7 @@
 	{% if current_user.is_authenticated %}
 		<a href="{{ url_for('home') }}">Home</a>
 		<a href="{{ url_for('about') }}">About</a>
+		<a href="{{ url_for('user_shop') }}">Your shop</a>
                 <a href="{{ url_for('submit_board') }}">Post</a>
                 <a href="{{ url_for('account') }}">Accouny</a>
                 <a href="{{ url_for('logout') }}">Logout</a>

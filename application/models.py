@@ -16,6 +16,7 @@ class Users(db.Model, UserMixin):
     email = db.Column(db.String(150), nullable=False, unique=True)
     password = db.Column(db.String(500), nullable=False)
     ordersbyuser = db.relationship('Orders',backref='customer', lazy=True)
+    usersProducts = db.relationship('Product',backref='usersShop', lazy=True)
 
 
     def __repr__(self):
@@ -47,4 +48,5 @@ class Product(db.Model):
     size = db.Column(db.Float, nullable=False)
     price = db.Column(db.Float, nullable=False)
     stock = db.Column(db.Integer, nullable=False)
+    user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
     product_line= db.relationship(Orders, secondary='order_line')

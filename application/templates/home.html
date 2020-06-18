@@ -28,7 +28,7 @@
     			<th>Style</th>
 			<th>Volume</th>
 			<th>Price</th>
-			<th></th>
+			<th>Quantity</th>
 		</tr>
 		{% for item in product %}
   		<tr>
@@ -43,6 +43,7 @@
     			<td>{{ item.style }}</td>
 			<td>{{ item.volume }}</td>
 			<td>{{ item.price }}</td>
+			<td>{{ item.stock }}</td>
   		</tr>
 		{% endfor %}
 	</table>
