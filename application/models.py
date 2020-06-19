@@ -43,7 +43,7 @@ class Order_line(db.Model):
 class Product(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(100), nullable=False, unique=True)
-    style = db.Column(db.String(100), nullable=False, unique=True)
+    style = db.Column(db.String(100), nullable=False)
     volume = db.Column(db.Float, nullable=False)
     size = db.Column(db.Float, nullable=False)
     price = db.Column(db.Float, nullable=False)
