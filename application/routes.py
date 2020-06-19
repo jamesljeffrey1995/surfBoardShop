@@ -93,13 +93,13 @@ def user_shop():
 def update_board(productItem):
     form = updateBoardForm()
     theProduct = Product.query.filter_by(id=productItem).first()
-    itemPrice = theProduct.price
     amountProduct= Product.query.order_by(Product.id.desc()).first()
     if int(productItem) > amountProduct.id or not current_user.is_authenticated:
         return redirect(url_for('home'))
     elif form.validate_on_submit():
         theProduct.stock = form.stock.data
         db.session.commit()
+        return redirect(url_for('home'))
     elif request.method == 'GET':
         form.stock.data = theProduct.stock
     return render_template('updateBoard.html', title='Update User Board',form=form)
