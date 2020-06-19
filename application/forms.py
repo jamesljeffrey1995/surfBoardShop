@@ -97,6 +97,10 @@ class PostForm(FlaskForm):
     stock = IntegerField('Stock')
     submit = SubmitField('Post!')
 
+class updateBoardForm(FlaskForm):
+    stock = IntegerField('Quantity')
+    submit = SubmitField('Update')
+
 class OrdersForm(FlaskForm):
     quantity = IntegerField('Quantity')
     submit = SubmitField('Checkout')

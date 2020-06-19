@@ -1,7 +1,7 @@
 from application import app, db, bcrypt
 from application.models import Product, Users, Orders, Order_line
 from flask_login import login_user, current_user, logout_user, login_required, current_user
-from application.forms import PostForm, RegistrationForm, LoginForm, UpdateAccountForm, OrdersForm
+from application.forms import PostForm, RegistrationForm, LoginForm, UpdateAccountForm, OrdersForm, updateBoardForm
 from flask import render_template, redirect, url_for, request
 import pymysql
 import sqlalchemy
@@ -55,7 +55,7 @@ def submit_board():
     return render_template('post.html', title='Post', form=form)
 
 
-@app.route("/account/delete", methods=["GET", "POST"])
+@app.route("/account/delete")
 @login_required
 def account_delete():
     user = current_user.id
@@ -83,11 +83,29 @@ def home():
     return render_template('home.html', title='Home', product=postData)
 
 @app.route('/user_shop', methods=["GET", "POST"])
+@login_required
 def user_shop():
     postData = Product.query.all()
     return render_template('userShop.html', title='User Shop', product=postData)
 
+@app.route('/Product/update/<productItem>', methods=["GET", "POST"])
+@login_required
+def update_board(productItem):
+    form = updateBoardForm()
+    theProduct = Product.query.filter_by(id=productItem).first()
+    itemPrice = theProduct.price
+    amountProduct= Product.query.order_by(Product.id.desc()).first()
+    if int(productItem) > amountProduct.id or not current_user.is_authenticated:
+        return redirect(url_for('home'))
+    elif form.validate_on_submit():
+        theProduct.stock = form.stock.data
+        db.session.commit()
+    elif request.method == 'GET':
+        form.stock.data = theProduct.stock
+    return render_template('updateBoard.html', title='Update User Board',form=form)
+
 @app.route('/Product/<productItem>', methods=["GET", "POST"])
+@login_required
 def product(productItem):
     form = OrdersForm()
     theProduct = Product.query.filter_by(id=productItem).first()

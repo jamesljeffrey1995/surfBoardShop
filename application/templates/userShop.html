@@ -35,7 +35,7 @@
                 <tr>
                         <td>
                                 {% if current_user.is_authenticated %}
-                                <a href="{{ url_for('product', productItem=item.id)}}">{{ item.name }}</a>
+                                <a href="{{ url_for('update_board', productItem=item.id)}}">{{ item.name }}</a>
                                 {% else %}
                                 {{ item.name }}
                                 {% endif %}

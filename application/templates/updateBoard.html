@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+{% block body_content %}
+    <h1>Update its quantity</h1>
+    <div class='form'>
+        <form method='POST' action=''>
+                <div class="form-group">
+                        {{ form.hidden_tag() }}
+                        {{ form.stock.label }}
+                        {{ form.stock }}
+            <div class='form_group'>
+                    {{ form.submit }}
+            </div>
+        </form>
+    </div>
+{% endblock %}
