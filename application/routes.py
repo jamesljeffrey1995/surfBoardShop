@@ -93,9 +93,7 @@ def product(productItem):
     theProduct = Product.query.filter_by(id=productItem).first()
     itemPrice = theProduct.price
     amountProduct= Product.query.order_by(Product.id.desc()).first()
-    if int(productItem) > amountProduct.id:
-        return redirect(url_for('home'))
-    elif not current_user.is_authenticated:
+    if int(productItem) > amountProduct.id or not current_user.is_authenticated:
         return redirect(url_for('home'))
     elif form.validate_on_submit():
         orderData = Orders(
