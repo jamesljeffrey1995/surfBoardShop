@@ -190,6 +190,19 @@ class TestViews(TestBase):
         response = self.client.get(url_for('logout'))
         self.assertEqual(response.status_code, 302)
 
+    def test_user_board_update_logged_in(self):
+        res1 = self.client.post(
+                '/login',
+                data=dict(
+                    email="test@test.com",
+                    password="test"
+                    ),
+                follow_redirects=True
+                )
+        self.assertEqual(res1.status_code, 200)
+        response = self.client.get(url_for('update_board', productItem = 1))
+        self.assertEqual(response.status_code, 200)
+
 class TestSubmitBoard(TestBase):
     def test_add_a_product(self):
         res1 = self.client.post(
