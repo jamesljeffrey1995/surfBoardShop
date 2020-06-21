@@ -12,13 +12,36 @@
 
 ![new_erd](https://i.imgur.com/jKn9mtf.png)
 
-<p1> The initial ERD was to meet the requirments of the project brief. It consists of a many to many relationship between the stock and the order</p1>
+<p1> The initial ERD was to meet the requirments of the project brief. It consists of a many to many relationship between the stock and the order. A user is able to make multiple orders with different products.</p1>
 
-  ![erd](https://i.imgur.com/M808vOi.png) 
+<h4>Updated Model</h4>
+  
+  ![erd](https://i.imgur.com/M808vOi.png)
+  
+<p1>The updated model has an orderline which allows for the many to many relationship. This takes the product ID and order ID which is assigned to the user, and allows for a calculation of the total. </p1>
+
+<h4>Deployed Model</h4>
+
   ![erd_update](https://i.imgur.com/ZAerkSj.png)
 
+<p1>The deployed model is the same as the updated model, but the user has a relationship to the stock, therefore when a product is made by the user, the user is assigned to it</p1>
+
 ![CI](https://i.imgur.com/XFJBrdJ.png)
-![User Stories](https://i.imgur.com/C6cpHzO.png)
+
+<h2>User Stories</h2>
+
+<p1>To track the progress of the project and layout what was needed, Trello was used to do this.</p1>
+
+![User Stories](https://i.imgur.com/xOR6AyI.png)
+
+<p1>The board has several collumns, this allowed to keep tabs on the progress. The application of MoSCoW method allowed for easier project tracking</p1>
+<ul>
+  <li><i>Product Backlog</i>: This showed the user stories that still needed to be completed</li>
+  <li><i>Sprint</i>: This showed what had to be completed to the timebox, which was 24 hours, with 4 sprints</li>
+  <li><i>In progress</i>: This shows what is currently being worked on</li>
+  <li><i>Completed</i>: This shows all the user stories that have been completed </li>
+</ul>
+
 ![Coverage Report](https://i.imgur.com/rn76lG0.png)
 ![app](https://i.imgur.com/6kPfQzX.png)
 ![app1](https://i.imgur.com/zuyNo0E.png)
