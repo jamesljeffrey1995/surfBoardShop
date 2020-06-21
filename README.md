@@ -100,3 +100,18 @@
 
 <p1>If the user is not logged in, then the Href is removed from the products and the user cannot navigate to the buy page</p1>
 
+<h2>Known Issues</h2>
+<ul>
+  <li>Dynamic url for products, if the product is deleted, the user can still go to the page but displays nothing apart from the layout.html</li>
+</ul>
+
+<h2>Future improvements</h2>
+<ul>
+  <li>Allow for the user to filter styles of boards, length and price</li>
+  <li>Allow for the user to see their orders<li>
+  <li>Group the orders that were made in the same session and create a checkout for all items</li>
+  <li>Improve the front end, and make it more visually appealing</li>
+</ul>
+
+<h2>Authors</h2>
+<p1>James Jeffrey</p1>
