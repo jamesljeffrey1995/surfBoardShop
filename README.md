@@ -1,10 +1,14 @@
 # Surfboard Shop
 
-<h3> The brief </h3>
+<h2> The brief </h2>
 <p1>To create a CRUD application using the technologies and methodologies that were taught to us during training.</p1>
 <br>
 <h3>My application</h3>
-
+<p1>My project is a surfshop. The web application allows for the user to add items, modify the quantity, delete selected products and also buy other products</p1>
+<br>
+<h2>Architecture</h2>
+<h3>Entity Relationship Diagrams</h3>
+<h4>Initial place</h4>
 ![new_erd](https://i.imgur.com/jKn9mtf.png)
 ![erd](https://i.imgur.com/MOqFUjt.png) 
 ![erd_update](https://i.imgur.com/crIblns.png)
