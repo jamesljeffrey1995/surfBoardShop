@@ -13,6 +13,7 @@
 ![new_erd](https://i.imgur.com/jKn9mtf.png)
 <br>
 <p1> The initial ERD was to meet the requirments of the project brief. It consists of a many to many relationship between the stock and the order</p1>
+<br>
 ![erd](https://i.imgur.com/M808vOi.png) 
 ![erd_update](https://i.imgur.com/ZAerkSj.png)
 
