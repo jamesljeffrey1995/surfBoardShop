@@ -60,9 +60,16 @@ def submit_board():
 def account_delete():
     user = current_user.id
     account = Users.query.filter_by(id=user).first()
-    posts = Posts.query.filter_by(user_id=user)
+    posts = Product.query.filter_by(user_id=user)
+    orders = Orders.query.filter_by(user_id=user)
+    orders_line = Order_line.query.all()
     for post in posts:
         db.session.delete(post)
+    for order in orders:
+        for line in orders_line:
+            if order.id == line.order_id:
+                db.session.delete(line)
+        db.session.delete(order)
     logout_user()
     db.session.delete(account)
     db.session.commit()
