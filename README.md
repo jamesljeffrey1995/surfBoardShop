@@ -1,6 +1,6 @@
 # Surfboard Shop
 
-<h1> The brief </h1>
+<h3> The brief </h3>
 ghhf
 
 ![new_erd](https://i.imgur.com/jKn9mtf.png)
