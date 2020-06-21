@@ -97,6 +97,6 @@
 
 ![app10](https://i.imgur.com/ZUlED00.png)
 ![app11](https://i.imgur.com/wQ7m4r2.png)
-![app12](https://i.imgur.com/pQjTlEy.png)
-![app11](https://i.imgur.com/wGrXMas.png)
-![app1](https://i.imgur.com/wIMs0Gq.png)
+
+<p1>If the user is not logged in, then the Href is removed from the products and the user cannot navigate to the buy page</p1>
+
