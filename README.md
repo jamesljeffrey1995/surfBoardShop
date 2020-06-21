@@ -9,9 +9,11 @@
 <h2>Architecture</h2>
 <h3>Entity Relationship Diagrams</h3>
 <h4>Initial place</h4>
+
 ![new_erd](https://i.imgur.com/jKn9mtf.png)
 ![erd](https://i.imgur.com/MOqFUjt.png) 
 ![erd_update](https://i.imgur.com/crIblns.png)
+
 ![CI](https://i.imgur.com/XFJBrdJ.png)
 ![User Stories](https://i.imgur.com/C6cpHzO.png)
 ![Coverage Report](https://i.imgur.com/rn76lG0.png)
