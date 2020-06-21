@@ -28,6 +28,10 @@
 
 ![CI](https://i.imgur.com/XFJBrdJ.png)
 
+<h2>Risk assessment</h2>
+
+![risk assessment](https://i.imgur.com/YWCctuD.png)
+
 <h2>User Stories</h2>
 
 <p1>To track the progress of the project and layout what was needed, Trello was used to do this.</p1>
