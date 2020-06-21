@@ -1,7 +1,9 @@
 # Surfboard Shop
 
 <h3> The brief </h3>
-<p1>To create a CRUD application using the technologies and methodologies that were taugh to us during training.</p1>
+<p1>To create a CRUD application using the technologies and methodologies that were taught to us during training.</p1>
+<br>
+<h3>My application</h3>
 
 ![new_erd](https://i.imgur.com/jKn9mtf.png)
 ![erd](https://i.imgur.com/MOqFUjt.png) 
