@@ -50,9 +50,10 @@
 
 <h3>Unit Testing</h3>
 
-<p1>Using pytest to create a coverage test of the application, 15 tests were made allowing for a 75% coverage</p1>
+<p1>Using pytest to create a coverage test of the application, 15 tests were made allowing for a 75% coverage. I then set jenkins pipeline up so that when anything is push to git, it is tested. That then triggers another job, which deploys the application</p1>
 
-![Coverage Report](https://i.imgur.com/rn76lG0.png)
+![Coverage Report console](https://i.imgur.com/pSLRsV6.png)
+![Coverage Report jenkins](https://i.imgur.com/pMjN7du.png)
 
 <h2>Surfboard Forum Shop</h2>
 <h3>Front End Design</h3>
