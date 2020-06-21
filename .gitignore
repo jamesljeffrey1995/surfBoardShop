@@ -3,4 +3,5 @@ surf-venv/
 .vscode/
 *.pyc
 chromedriver
-install-jenkins.sh
+jenkins-install.sh
+htmlcov/
