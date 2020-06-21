@@ -9,13 +9,11 @@
 <h2>Architecture</h2>
 <h3>Entity Relationship Diagrams</h3>
 <h4>Initial plan</h4>
-<br>
-![new_erd](https://i.imgur.com/jKn9mtf.png)
-<br>
+  ![new_erd](https://i.imgur.com/jKn9mtf.png)
 <p1> The initial ERD was to meet the requirments of the project brief. It consists of a many to many relationship between the stock and the order</p1>
-<br>
-![erd](https://i.imgur.com/M808vOi.png) 
-![erd_update](https://i.imgur.com/ZAerkSj.png)
+
+  ![erd](https://i.imgur.com/M808vOi.png) 
+  ![erd_update](https://i.imgur.com/ZAerkSj.png)
 
 ![CI](https://i.imgur.com/XFJBrdJ.png)
 ![User Stories](https://i.imgur.com/C6cpHzO.png)
