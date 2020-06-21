@@ -52,17 +52,49 @@
 
 <h2>Surfboard Forum Shop</h2>
 <h3>Front End Design</h3>
+<p1>The design is made using HTML</p1><br>
+<p1>When the user navigates via the url, they are directed to the homepage</p1><br>
+<p1>Using the navigate bar, they are able to register an account. These details are stored in the Users table</p1>
 
 ![app](https://i.imgur.com/6kPfQzX.png)
+
+<p1>The user is then redirected to the login page, where they can input their credentials</p1>
+
 ![app1](https://i.imgur.com/zuyNo0E.png)
+
+<p1>The user is then redirected to the homepage, where a new navigation bar is presented</p1>
+
 ![app2](https://i.imgur.com/5jFqD3n.png)
+
+<p1>The post page allows for the user to post a surfboard they wish to sell.</p1>
+
 ![app3](https://i.imgur.com/Mj7ybjN.png)
+
+<p1>The user is then redirected back to the homepage, where their item is then presented</p1>
+
 ![app4](https://i.imgur.com/rpAaU13.png)
+
+<p1>The user can click on the item, and they are directed to the products page of that item. They can then input an amout they want to buy</p1>
+
 ![app5](https://i.imgur.com/2FeUjLY.png)
+
+<p1>They are then redirected back to the homepage, and is shown that the quantity of the item has reduced. If the user input a quantity that is over the amount of stock, then they are redirected to the homepage and the order doesnt go through</p1>
+
 ![app6](https://i.imgur.com/5xNn01V.png)
+
+<p1>If the user then navigates to 'your shop', then they can view the items they uploaded</p1>
+
 ![app7](https://i.imgur.com/g2PWGBD.png)
+
+
+<p1>If the user clicks on the item name, they are directed to update page, where they can change the quantity of the product, they are then redirected back to the homepage</p1>
+
 ![app8](https://i.imgur.com/MlrfC7n.png)
 ![app9](https://i.imgur.com/n8zVbxH.png)
+
+
+<p1>The user can also delete an item in the user shop, once they press delete, they are redirected to the home page</p1>
+
 ![app10](https://i.imgur.com/ZUlED00.png)
 ![app11](https://i.imgur.com/wQ7m4r2.png)
 ![app12](https://i.imgur.com/pQjTlEy.png)
