@@ -108,7 +108,7 @@
 <h2>Future improvements</h2>
 <ul>
   <li>Allow for the user to filter styles of boards, length and price</li>
-  <li>Allow for the user to see their orders<li>
+  <li>Allow for the user to see their orders</li>
   <li>Group the orders that were made in the same session and create a checkout for all items</li>
   <li>Improve the front end, and make it more visually appealing</li>
 </ul>
