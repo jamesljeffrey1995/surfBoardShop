@@ -42,7 +42,17 @@
   <li><i>Completed</i>: This shows all the user stories that have been completed </li>
 </ul>
 
+<h2>Testing</h2>
+
+<h3>Unit Testing</h3>
+
+<p1>Using pytest to create a coverage test of the application, 15 tests were made allowing for a 75% coverage</p1>
+
 ![Coverage Report](https://i.imgur.com/rn76lG0.png)
+
+<h2>Surfboard Forum Shop</h2>
+<h3>Front End Design</h3>
+
 ![app](https://i.imgur.com/6kPfQzX.png)
 ![app1](https://i.imgur.com/zuyNo0E.png)
 ![app2](https://i.imgur.com/5jFqD3n.png)
