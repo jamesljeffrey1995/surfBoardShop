@@ -13,7 +13,7 @@ pipeline
 		{
 			steps 
 			{
-				sh '''ssh ${ssh_ip} << EOF
+				sh '''ssh -tt ${ssh_ip} << EOF
 					cd ~/
 					sudo rm -r ./james
 					git clone --single-branch --branch prototype https://github.com/jamesljeffrey1995/surfBoardShop.git
