@@ -1,8 +1,8 @@
 # Surfboard Shop
 
-[the brief](#The brief)
 
-<h2> #The brief </h2>
+
+<h2> The brief </h2>
 <p1>To create a CRUD application using the technologies and methodologies that were taught to us during training.</p1>
 <br>
 <h3>My application</h3>
