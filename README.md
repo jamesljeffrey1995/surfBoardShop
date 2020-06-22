@@ -22,14 +22,8 @@
     
    [ERD](#entity-relationship-diagrams)
    
-   <ul>
-  <li>
-    
-   [Initial plan](#initial-plan)
-  
-  </li>
-  </ul>
    </li>
+   
    </ul>
  
  </ul>  
@@ -59,6 +53,11 @@
 
 <p1>The deployed model is the same as the updated model, but the user has a relationship to the stock, therefore when a product is made by the user, the user is assigned to it</p1>
 
+<h2>CI Pipeline</h2>
+
+<p1>The picture is below is the continuous integration pipeline. This allows for rapid and efficient development to deployment. This allows for me to develop code on my local machine and push it using the github, then via a webhook it is automatically tested and they are stored in a file.</p1>
+  
+  
 ![CI](https://i.imgur.com/XFJBrdJ.png)
 
 <h2>Risk assessment</h2>
