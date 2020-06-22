@@ -1,6 +1,10 @@
 # Surfboard Shop
 <ul>
-  <li>[The Brief](#the-brief)</li>
+  <li>
+    
+   [The Brief](#the-brief)
+    
+   </li>
   <li>[My application](#my-application)</li>
  <ul>
    
