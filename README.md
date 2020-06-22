@@ -25,6 +25,46 @@
    </li>
    
    </ul>
+   <li>
+  
+  [CI pipeline](#ci-pipeline)
+  
+  </li>
+  <li>
+  
+  [Risk Assessment](#risk-assessment)
+  
+  </li>
+  <li>
+  
+  [User Stories](#user-stories)
+  
+  </li>
+  <li>
+  
+  [Testing](#testing)
+  
+  </li>
+  <li>
+  
+  [Surfboard Forum Shop](#surfboard-forum-shop)
+  
+  </li>
+  <li>
+  
+  [Known Issues](#known-issues)
+  
+  </li>
+  <li>
+  
+  [Future Improvements](#future-improvements)
+  
+  </li>
+  <li>
+  
+  [Authors](#authors)
+  
+  </li>
  
  </ul>  
 <h2>The brief</h2> 
@@ -82,7 +122,7 @@
 
 <h3>Unit Testing</h3>
 
-<p1>Using pytest to create a coverage test of the application, 15 tests were made allowing for a 75% coverage. I then set jenkins pipeline up so that when anything is push to git, it is tested and the index.html is stored in a tests folder. That then triggers another job, which deploys the application.</p1>
+<p1>Using pytest to create a coverage test of the application, 15 tests were made allowing for a 76% coverage. I then set jenkins pipeline up so that when anything is push to git, it is tested and the index.html is stored in a tests folder. That then triggers another job, which deploys the application.</p1>
 
 ![Coverage Report console](https://i.imgur.com/pSLRsV6.png)
 ![Coverage Report jenkins](https://i.imgur.com/pMjN7du.png)
