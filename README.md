@@ -24,7 +24,11 @@
    
    <ul>
   <li>
-    [Initial plan](#initial-plan)
+    
+   [Initial plan](#initial-plan)
+  
+  </li>
+  </ul>
    </li>
    </ul>
  
