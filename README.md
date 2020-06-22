@@ -1,8 +1,8 @@
 # Surfboard Shop
-
-[The Brief](#the-brief)
-
-#The brief 
+<ul>
+<li>[The Brief](#the-brief)
+<li>[My application](#my-application)
+<h2>The brief</h2> 
 <p1>To create a CRUD application using the technologies and methodologies that were taught to us during training.</p1>
 <br>
 <h3>My application</h3>
