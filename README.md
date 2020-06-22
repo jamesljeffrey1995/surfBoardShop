@@ -50,7 +50,7 @@
 
 <h3>Unit Testing</h3>
 
-<p1>Using pytest to create a coverage test of the application, 15 tests were made allowing for a 75% coverage. I then set jenkins pipeline up so that when anything is push to git, it is tested. That then triggers another job, which deploys the application</p1>
+<p1>Using pytest to create a coverage test of the application, 15 tests were made allowing for a 75% coverage. I then set jenkins pipeline up so that when anything is push to git, it is tested and the index.html is stored in a tests folder. That then triggers another job, which deploys the application.</p1>
 
 ![Coverage Report console](https://i.imgur.com/pSLRsV6.png)
 ![Coverage Report jenkins](https://i.imgur.com/pMjN7du.png)
@@ -108,6 +108,8 @@
 <h2>Known Issues</h2>
 <ul>
   <li>Dynamic url for products, if the product is deleted, the user can still go to the page but displays nothing apart from the layout.html</li>
+  <li>Gunicorn is deployed constantly</li>
+  <li>Email says it succesfully sent email, but no email is recieved</li> 
 </ul>
 
 <h2>Future improvements</h2>
