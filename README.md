@@ -12,6 +12,19 @@
   
   </li>
  </ul>
+ <li>
+  
+  [Architecture](#architecture)
+  
+  </li>
+  <ul>
+  <li>
+    
+   [ERD](#entity-relationship-diagrams)
+   
+   </li>
+   </ul>
+ 
  </ul>  
 <h2>The brief</h2> 
 <p1>To create a CRUD application using the technologies and methodologies that were taught to us during training.</p1>
