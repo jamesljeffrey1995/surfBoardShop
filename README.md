@@ -22,6 +22,9 @@
     
    [ERD](#entity-relationship-diagrams)
    
+   <ul>
+  <li>
+    [Initial plan](#initial-plan)
    </li>
    </ul>
  
