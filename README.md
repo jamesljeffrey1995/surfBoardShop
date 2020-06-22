@@ -4,14 +4,15 @@
     
    [The Brief](#the-brief)
     
-  <li>
+  </li>
+  <ul>
+    <li>
   
-  [My application](#my-application)
+   [My application](#my-application)
   
   </li>
-  </li>
- <ul>
-   
+ </ul>
+ </ul>  
 <h2>The brief</h2> 
 <p1>To create a CRUD application using the technologies and methodologies that were taught to us during training.</p1>
 <br>
