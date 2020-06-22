@@ -4,11 +4,11 @@
     
    [The Brief](#the-brief)
     
-   </li>
   <li>
   
   [My application](#my-application)
   
+  </li>
   </li>
  <ul>
    
