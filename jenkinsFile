@@ -15,9 +15,8 @@ pipeline
 			{
 				sh '''ssh -tt ${ssh_ip} << EOF
 					cd ~/
-					sudo rm -r ./james
 					git clone --single-branch --branch prototype https://github.com/jamesljeffrey1995/surfBoardShop.git
-					cd ./james
+					cd ./surfBoardShop
 					sudo apt update
 				'''
 			}
